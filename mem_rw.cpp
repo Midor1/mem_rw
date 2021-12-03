@@ -43,7 +43,7 @@ int main (int argc, char **argv) {
     // TODO: global memory rw
     unsigned mem_global = atoi(argv[3]);
     // 将绑核参数转换为掩码
-    auto mask = numa_parse_cpustring(argv[4])
+    auto mask = numa_parse_cpustring(argv[4]);
     for (int i=1;i<=proc_num;i++) {
         // 开proc_num个线程进行处理
         std::thread t(memory_exclusive, mem_per_proc);
